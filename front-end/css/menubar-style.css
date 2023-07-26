@@ -1,0 +1,65 @@
+.menu-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    margin-top: 1px;
+    margin-right: 2px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    transition: all 0.5s ease-out;
+}
+
+.menu-btn:hover {
+    color: #333;
+    background-color: #fff;
+}
+
+.menubar {
+    height: 100vh;
+    width: 150px;
+    position: absolute;
+    top: 0px;
+    left: -300px;
+    background-color: #000;
+    transition: all 0.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.list-btn {
+    text-transform: uppercase;
+    height: 3rem;
+    background-color: transparent;
+    color: #fff;
+    border: 0;
+    width: 100%;
+}
+
+.list-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+a {
+    width: 100%;
+}
+
+.class-btn {
+    background-color: darkred;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    width: 100px;
+    height: 25px;
+}
+
+.class-btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+}

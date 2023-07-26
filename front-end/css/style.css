@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-image: url("../imgs/patrick-fobian-y7hn9WYxK3s-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+}
+
+h3 {
+    text-transform: uppercase;
+    margin: 0;
+    color: #fff;
+}
+
+/**************
+ The introduction title and buttons
+  *******************/
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-text {
+    color: #fff;
+    text-shadow: -1px 1px 2px #000,
+        1px 2px 6px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    margin-bottom: 0;
+}
+
+.title-text + p {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #000;
+}
+
+/**********************
+The login form
+ **********************/
+
+ .login-card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    background-color: rgba(32, 42, 68, 0.9);
+    border-radius: 10px;
+    box-shadow: 10px 10px;
+    margin-left: 4000px;
+    transition: all 0.5s ease-out;
+ }
+
+ .login-card p {
+    margin-bottom: 10px;
+    font-size: 30px;
+ }
+
+ .login-card input {
+    margin-bottom: 30px;
+ }
+
+ .login-card button {
+    background-color: #fff;
+    color: #000;
+    margin-top: 15px;
+ }
+
+ .login-card button:hover {
+    background-color: #000;
+    color: #fff;
+ }
+
+ #back-btn {
+    position: relative;
+    margin-right: 300px;
+    margin-top: 50px;
+ }
+
+ /********************************
+ Create Account Card
+  ********************************/
+
+.create-card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    background-color: rgba(186, 140, 99, 0.9);
+    border-radius: 10px;
+    box-shadow: 10px 10px;
+    margin-right: 4000px;
+}
+
+.create-card input {
+    margin-bottom: 30px;
+}
+
+.create-card p {
+    text-transform: uppercase;
+}
+
+#create-back-btn {
+    position: relative;
+    margin-left: 300px;
+    margin-top: 75px;
+}
+
+.loading {
+    visibility: hidden;
+    margin: auto;
+    border: 20px solid #EAF0F6;
+    border-radius: 100%;
+    border-top: 20px solid #6495ED;
+    animation: spin 4s linear infinite;
+}
+
+.loading.display {
+    visibility: visible;
+}
+
+.loading-create {
+    visibility: hidden;
+    margin: auto;
+    border: 20px solid #EAF0F6;
+    border-radius: 100%;
+    border-top: 20px solid #FF7A59;
+    animation: spin 4s linear infinite;
+}
+
+.loading-create.display {
+    visibility: visible;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}

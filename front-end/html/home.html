@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home-style.css">
+    <link rel="stylesheet" href="../css/menubar-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body id="body">
+<h1>Characters</h1>
+<button class="menu-btn" id="menu-btn"><i class="fa-solid fa-bars fa-2xl"></i></button>
+<div class="menubar" id="menubar">
+    <a href="../html/home.html"><button class="list-btn">Home</button></a>
+    <a href="../html/index.html"><button class="list-btn log-out">Log-Out</button></a>
+</div>
+
+<div class="content">
+    <div class="wave">
+        <span style="--i:1">L</span>
+        <span style="--i:2">o</span>
+        <span style="--i:3">a</span>
+        <span style="--i:4">d</span>
+        <span style="--i:5">i</span>
+        <span style="--i:6">n</span>
+        <span style="--i:7">g</span>
+        <span style="--i:8">.</span>
+        <span style="--i:9">.</span>
+        <span style="--i:10">.</span>
+    </div>
+    <div class="add-character">
+        <i class="fa-solid fa-plus"></i>
+    </div>
+</div>
+<div class="create-char">
+    <h2>Enter Character Name</h2>
+    <p>All names must be unique</p>
+    <input type="text" name="char-name" id="char-name" placeholder="Tav" required>
+    <a href="../html/Races.html"><button class="next-btn">NEXT</button></a>
+    <button class="create-back">BACK</button>
+</div>
+
+<script src="../js/menuBtns.js"></script>
+<script src="../js/characters.js"></script>
+</body>
+</html>

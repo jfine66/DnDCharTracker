@@ -1,0 +1,159 @@
+body {
+    background-color: #ccc;
+}
+
+.page {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+}
+
+.level-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.char-info {
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stats {
+    border: 2px solid black;
+}
+
+.stats-container {
+    display: flex;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-right: 50px;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-right: 100px;
+}
+
+.stat {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.mod {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.saving-throws {
+    padding: 10px;
+}
+
+.saving-mod {
+    display: inline;
+}
+
+.pro-bonus {
+    text-align: center;
+}
+
+.skills {
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.hp-ac {
+    margin-right: 100px;
+}
+
+.save-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: none;
+    background-color: green;
+    color: white;
+    width: 100px;
+    height: 50px;
+}
+
+.save-btn:hover {
+    border: 5px solid black;
+}
+
+.back-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: none;
+    background-color: gray;
+    color: white;
+    width: 100px;
+    height: 50px;
+}
+
+.back-btn:hover {
+    border: 5px solid black;
+}
+
+.display-stat {
+    display: inline;
+}
+
+.arrow {
+    border: none;
+}
+
+#character-exp {
+    height: 50%;
+    margin: auto 0;
+}
+
+.wave {
+    visibility: hidden;
+    position: absolute;
+    color: #fff;
+    background-color: #000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wave span {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: calc(.1s*var(--i));
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-20px);
+    }
+
+    40%,
+    100% {
+        transform: translateY(0px);
+    }
+}

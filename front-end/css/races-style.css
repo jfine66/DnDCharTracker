@@ -1,0 +1,80 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-image: url("../imgs/annie-spratt-xvU-X0GV9-o-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+}
+
+h1 {
+    text-align: center;
+}
+
+.content {
+   width: 70%;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+}
+
+.race-card {
+    margin-bottom: 10px;
+    border: 2px solid black;
+    background-color: #ccc;
+    text-align: center;
+    height: 250px;
+}
+
+.text-box {
+    background-color: #eee;
+    width: 50%;
+    margin-left: 25%;
+}
+
+/* Race images */
+.dragonborn {
+    background-image: url(../imgs/dragonborn.png);
+    background-repeat: no-repeat;
+}
+
+.dwarf {
+    background-image: url(../imgs/Dwarf.png);
+    background-repeat: no-repeat;
+}
+
+.elf {
+    background-image: url(../imgs/elf.png);
+    background-repeat: no-repeat;
+}
+
+.gnome {
+    background-image: url(../imgs/gnome.png);
+    background-repeat: no-repeat;
+}
+
+.half-elf {
+    background-image: url(../imgs/half-elf.png);
+    background-repeat: no-repeat;
+}
+
+.halfing {
+    background-image: url(../imgs/halfing.png);
+    background-repeat: no-repeat;
+}
+
+.half-orc {
+    background-image: url(../imgs/half-orc.png);
+    background-repeat: no-repeat;
+}
+
+.human {
+    background-image: url(../imgs/human.png);
+    background-repeat: no-repeat;
+}
+
+.tiefling {
+    background-image: url(../imgs/tielfing.png);
+    background-repeat: no-repeat;
+}

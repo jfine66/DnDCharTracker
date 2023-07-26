@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/characterSheet.css">
+    <title>CharacterSheet</title>
+</head>
+<body>
+<div class="page">
+    <div class="char-info">
+        <p id="character-name">Character name</p>
+        <p id="character-race">Race</p>
+        <p id="character-class">Class</p>
+        <div class="level-container">
+            <button class="arrow down-arrow"><i class="fa-solid fa-caret-left"></i></button>
+            <p id="character-level">0</p>
+            <button class="arrow up-arrow"><i class="fa-solid fa-caret-right"></i></button>
+        </div>
+        <input type="text" id="character-exp"></input>
+    </div>
+    <div class="stats-container">
+        <div class="stats">
+            <div class="stat">
+                <p>STR</p>
+                <button class="arrow down-arrow"><i class="fa-solid fa-caret-left"></i></button>
+                <p class="display-stat" id="str-stat">10</p>
+                <button class="arrow up-arrow"><i class="fa-solid fa-caret-right"></i></button>
+                <p class="mod" id="str-mod">+0</p>
+            </div>
+            <div class="stat">
+                <p>DEX</p>
+                <button class="arrow down-arrow"><i class="fa-solid fa-caret-left"></i></button>
+                <p class="display-stat" id="dex-stat">11</p>
+                <button class="arrow up-arrow"><i class="fa-solid fa-caret-right"></i></button>
+                <p class="mod" id='dex-mod'>+0</p>
+            </div>
+            <div class="stat">
+                <p>CON</p>
+                <button class="arrow down-arrow"><i class="fa-solid fa-caret-left"></i></button>
+                <p class="display-stat" id="con-stat">12</p>
+                <button class="arrow up-arrow"><i class="fa-solid fa-caret-right"></i></button>
+                <p class="mod" id="con-mod">+0</p>
+            </div>
+            <div class="stat">
+                <p>INT</p>
+                <button class="arrow down-arrow"><i class="fa-solid fa-caret-left"></i></button>
+                <p class="display-stat" id="int-stat">10</p>
+                <button class="arrow up-arrow"><i class="fa-solid fa-caret-right"></i></button>
+                <p class="mod" id="int-mod">+0</p>
+            </div>
+            <div class="stat">
+                <p>WIS</p>
+                <button class="arrow down-arrow"><i class="fa-solid fa-caret-left"></i></button>
+                <p class="display-stat" id="wis-stat">10</p>
+                <button class="arrow up-arrow"><i class="fa-solid fa-caret-right"></i></button>
+                <p class="mod" id="wis-mod">+0</p>
+            </div>
+            <div class="stat">
+                <p>CHAR</p>
+                <button class="arrow down-arrow"><i class="fa-solid fa-caret-left"></i></button>
+                <p class="display-stat" id="char-stat">10</p>
+                <button class="arrow up-arrow"><i class="fa-solid fa-caret-right"></i></button>
+                <p class="mod" id="char-mod">+0</p>
+            </div>
+        </div>
+        <div class="skills-container">
+            <div class="pro-bonus">
+                <p>PROFICIENCY BONUS</p>
+                <p class="mod" id="proficiency">+2</p>
+            </div>
+            <div class="saving-throws">
+                <input type="checkbox" name="STR" id="Str-save" class="save">
+                <label for="Str-save">STR</label>
+                <p class="saving-mod str">+0</p>
+                <br>
+                <input type="checkbox" name="DEX" id="Dex-save" class="save">
+                <label for="Dex-save">DEX</label>
+                <p class="saving-mod dex">+0</p>
+                <br>
+                <input type="checkbox" name="CON" id="Con-save" class="save">
+                <label for="Con-save">CON</label>
+                <p class="saving-mod con">+0</p>
+                <br>
+                <input type="checkbox" name="WIS" id="Wis-save" class="save">
+                <label for="Wis-save">WIS</label>
+                <p class="saving-mod wis">+0</p>
+                <br>
+                <input type="checkbox" name="INT" id="Int-save" class="save">
+                <label for="Int-save">INT</label>
+                <p class="saving-mod int">+0</p>
+                <br>
+                <input type="checkbox" name="CHAR" id="Char-save" class="save">
+                <label for="Char-save">CHAR</label>
+                <p class="saving-mod char">+0</p>
+            </div>
+            <div class="skills">
+                <input type="checkbox" name="Arco" id="arco-skill" class="skill">
+                <label for="arco-skill">Acrobatics</label>
+                <p class="saving-mod dex">+0</p>
+                <br>
+                <input type="checkbox" name="Animal" id="animal-skill" class="skill">
+                <label for="animal-skill">Animal Handling</label>
+                <p class="saving-mod wis">+0</p>
+                <br>
+                <input type="checkbox" name="Arcana" id="arcana-skill" class="skill">
+                <label for="arcana-skill">Arcana</label>
+                <p class="saving-mod int">+0</p>
+                <br>
+                <input type="checkbox" name="Athletics" id="athletics" class="skill">
+                <label for="Athletics">Athletics</label>
+                <p class="saving-mod str">+0</p>
+                <br>
+                <input type="checkbox" name="Deception" id="Deception" class="skill">
+                <label for="Deception">Deception</label>
+                <p class="saving-mod char">+0</p>
+                <br>
+                <input type="checkbox" name="History" id="History" class="skill">
+                <label for="History">History</label>
+                <p class="saving-mod int">+0</p>
+                <br>
+                <input type="checkbox" name="Insight" id="Insight" class="skill">
+                <label for="Insight">Insight</label>
+                <p class="saving-mod wis">+0</p>
+                <br>
+                <input type="checkbox" name="Intimidation" id="Intimidation" class="skill">
+                <label for="Intimidation">Intimidation</label>
+                <p class="saving-mod char">+0</p>
+                <br>
+                <input type="checkbox" name="Investiogation" id="Investiogation" class="skill">
+                <label for="Investiogation">Investiogation</label>
+                <p class="saving-mod int">+0</p>
+                <br>
+                <input type="checkbox" name="Medicine" id="Medicine" class="skill">
+                <label for="Medicine">Medicine</label>
+                <p class="saving-mod wis">+0</p>
+                <br>
+                <input type="checkbox" name="Nature" id="Nature" class="skill">
+                <label for="Nature">Nature</label>
+                <p class="saving-mod int">+0</p>
+                <br>
+                <input type="checkbox" name="Perception" id="Perception" class="skill">
+                <label for="Perception">Perception</label>
+                <p class="saving-mod wis">+0</p>
+                <br>
+                <input type="checkbox" name="Performance" id="Performance" class="skill">
+                <label for="Performance">Performance</label>
+                <p class="saving-mod char">+0</p>
+                <br>
+                <input type="checkbox" name="Persuasion" id="Persuasion" class="skill">
+                <label for="Persuasion">Persuasion</label>
+                <p class="saving-mod char">+0</p>
+                <br>
+                <input type="checkbox" name="Religion" id="Religion" class="skill">
+                <label for="Religion">Religion</label>
+                <p class="saving-mod int">+0</p>
+                <br>
+                <input type="checkbox" name="Sleight of Hand" id="Sleight of Hand" class="skill">
+                <label for="Sleight of Hand">Sleight of Hand</label>
+                <p class="saving-mod dex">+0</p>
+                <br>
+                <input type="checkbox" name="Stealth" id="Stealth" class="skill">
+                <label for="Stealth">Stealth</label>
+                <p class="saving-mod dex">+0</p>
+                <br>
+                <input type="checkbox" name="Survival" id="Survival" class="skill">
+                <label for="Survival">Survival</label>
+                <p class="saving-mod wis">+0</p>
+                <br>
+            </div>
+        </div>
+        <div class="hp-ac">
+            <p>Max HP:</p>
+            <button class="arrow hp-down-arrow"><i class="fa-solid fa-caret-left"></i></button>
+            <p class="display-stat max-hp">10</p>
+            <button class="arrow hp-up-arrow"><i class="fa-solid fa-caret-right"></i></button>
+            <p>Current HP: </p>
+            <button class="arrow hp-down-arrow"><i class="fa-solid fa-caret-left"></i></button>
+            <p class="display-stat current-hp">10</p>
+            <button class="arrow hp-up-arrow"><i class="fa-solid fa-caret-right"></i></button>
+            <p>AC:</p>
+            <button class="arrow hp-down-arrow"><i class="fa-solid fa-caret-left"></i></button>
+            <p class="display-stat ac">10</p>
+            <button class="arrow hp-up-arrow"><i class="fa-solid fa-caret-right"></i></button>
+            <p>Speed: </p>
+            <button class="arrow hp-down-arrow"><i class="fa-solid fa-caret-left"></i></button>
+            <p class="display-stat speed">10</p>
+            <button class="arrow hp-up-arrow"><i class="fa-solid fa-caret-right"></i></button>
+            <p>Hit die:</p>
+            <button class="arrow hp-down-arrow"><i class="fa-solid fa-caret-left"></i></button>
+            <p class="display-stat hitdie">10</p>
+            <button class="arrow hp-up-arrow"><i class="fa-solid fa-caret-right"></i></button>
+            <p>Death Saves:</p>
+            <p>Successes: </p>
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <p>Failures: </p>
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+        </div>
+        <div class="notes">
+            <p>NOTES:</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+    <button class="back-btn">BACK</button>
+    <button class="save-btn">SAVE</button>
+</div>
+<div class="wave">
+    <span style="--i:1">L</span>
+    <span style="--i:2">o</span>
+    <span style="--i:3">a</span>
+    <span style="--i:4">d</span>
+    <span style="--i:5">i</span>
+    <span style="--i:6">n</span>
+    <span style="--i:7">g</span>
+    <span style="--i:8">.</span>
+    <span style="--i:9">.</span>
+    <span style="--i:10">.</span>
+</div>
+
+<script src="../js/characterInfoDB.js"></script>
+<script src="../js/characterSheet.js"></script>
+</body>
+</html>

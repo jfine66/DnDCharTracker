@@ -1,0 +1,402 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "DnDCharTracker",
+    "version": "1.0.11"
+  },
+  "paths": {
+    "/users": {
+      "post": {
+        "description": "This is used to get all users, must use POST because you need username and password in json body",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Users"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Users"
+                  },
+                  "example": {
+                    "name": "Drizz",
+                    "password": "apple"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Can not find user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Error"
+                  },
+                  "example": {
+                    "code": 400,
+                    "message": "Could not find user"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Error"
+                  },
+                  "example": {
+                    "code": 500,
+                    "message": "Server Error"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/create": {
+      "post": {
+        "description": "Create a new user in table",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Users"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Users"
+                  },
+                  "example": {
+                    "name": "Drizz",
+                    "password": "72159871",
+                    "characters": []
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Error"
+                  },
+                  "example": {
+                    "code": 500,
+                    "messaeg": "Server Error"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/characters": {
+      "post": {
+        "description": "Add new character to user",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Character"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Character"
+                  },
+                  "example": {
+                    "userName": "Drizz",
+                    "password": "4243545",
+                    "characterName": "Cheese",
+                    "className": "Fighter",
+                    "race": "Half-Orc",
+                    "strStat": 15,
+                    "dexStat": 16,
+                    "conStat": 14,
+                    "intStat": 10,
+                    "wisStat": 10,
+                    "charStat": 8,
+                    "proficiencyBonus": 2,
+                    "maxHealth": 12,
+                    "AC": 16,
+                    "speed": 30,
+                    "hitDie": 1,
+                    "savingThrows": {
+                      "STR": true,
+                      "DEX": true,
+                      "CON": true
+                    },
+                    "skills": {
+                      "Arcobatics": true,
+                      "Nature": false,
+                      "Insight": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Can not find character",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Error"
+                  },
+                  "example": {
+                    "code": 400,
+                    "message": "Can not find character"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Error"
+                  },
+                  "example": {
+                    "code": 500,
+                    "messaeg": "Server Error"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update a character stats",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "items": {
+                  "$ref": "#/components/schemas/Character"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Character"
+                  },
+                  "example": {
+                    "userName": "Drizz",
+                    "password": "4243545",
+                    "characterName": "Cheese",
+                    "className": "Fighter",
+                    "race": "Half-Orc",
+                    "strStat": 15,
+                    "dexStat": 16,
+                    "conStat": 14,
+                    "intStat": 10,
+                    "wisStat": 10,
+                    "charStat": 8,
+                    "proficiencyBonus": 2,
+                    "maxHealth": 12,
+                    "AC": 16,
+                    "speed": 30,
+                    "hitDie": 1,
+                    "savingThrows": {
+                      "STR": true,
+                      "DEX": true,
+                      "CON": true
+                    },
+                    "skills": {
+                      "Arcobatics": true,
+                      "Nature": false,
+                      "Insight": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Can not find character",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Error"
+                  },
+                  "example": {
+                    "code": 400,
+                    "message": "Can not find character"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Error"
+                  },
+                  "example": {
+                    "code": 500,
+                    "messaeg": "Server Error"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Users": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "characters": {
+            "type": "object"
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "Character": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "characterName": {
+            "type": "string"
+          },
+          "className": {
+            "type": "string"
+          },
+          "race": {
+            "type": "string"
+          },
+          "strStat": {
+            "type": "integer"
+          },
+          "dexStat": {
+            "type": "integer"
+          },
+          "conStat": {
+            "type": "integer"
+          },
+          "intStat": {
+            "type": "integer"
+          },
+          "wisStat": {
+            "type": "integer"
+          },
+          "charStat": {
+            "type": "integer"
+          },
+          "proficiencyBonus": {
+            "type": "integer"
+          },
+          "maxHealth": {
+            "type": "integer"
+          },
+          "AC": {
+            "type": "integer"
+          },
+          "speed": {
+            "type": "integer"
+          },
+          "hitDie": {
+            "type": "integer"
+          },
+          "savingThrows": {
+            "type": "object"
+          },
+          "skills": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>D&D Character Creator</title>
+</head>
+<body>
+<div class="intro" id="intro">
+    <h1 class="title-text">D&D Character Creator</h1>
+    <p class="title-text">Create and store all your characters in one place!</p>
+    <div class="login-btns">
+        <button id="create-btn">Create Account</button>
+        <button id="login-btn">Login</button>
+    </div>
+</div>
+<div class="login-card" id="login-card">
+    <h3>Welcome Back!</h3>
+    <p class="title-text">Username: </p>
+    <input type="text" name="username" id="username" placeholder="ConanTheDestoryer">
+    <p class="title-text">Password: </p>
+    <input type="password" name="login-password" id="login-password" placeholder="Super secret password">
+    <div class="loading"></div>
+    <button id="login-account">Login</button>
+    <button id="back-btn"><i class="fa-solid fa-caret-left fa-2xl"></i></button>
+
+
+</div>
+<div class="create-card" id="create-card">
+    <h3>Adventure Awaits</h3>
+    <p class="title-text">Username: </p>
+    <input type="text" name="create-username" id="create-username" placeholder="ConanTheDestoryer">
+    <p class="title-text">Password: </p>
+    <input type="password" name="create-password" id="create-password" placeholder="Super secret password">
+    <div class="loading-create"></div>
+    <button id="create-account">Create Account</button>
+    <button id="create-back-btn"><i class="fa-solid fa-caret-right fa-2xl"></i></button>
+</div>
+
+
+<script src="../js/script.js"></script>
+</body>
+</html>

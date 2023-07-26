@@ -1,0 +1,70 @@
+body {
+    background-image: url('../imgs/armory.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+.content {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.class-card {
+    margin-bottom: 10px;
+    border: 2px solid black;
+    background-color: #ccc;
+    text-align: center;
+    height: 250px;
+}
+
+.class-card h3 {
+    text-transform: uppercase;
+}
+
+.wave {
+    visibility: hidden;
+    position: fixed;
+    color: #fff;
+    background-color: #000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wave span {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: calc(.1s*var(--i));
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-20px);
+    }
+
+    40%,
+    100% {
+        transform: translateY(0px);
+    }
+}
